@@ -14,7 +14,7 @@
 |$\mathcal{E}^{r,stage}$|set of all equivocators voters in sub-round "stage" of round $r$||
 |$\mathcal{E}^{r,stage}_{obs(v)}$|set of all equivocators voters in sub-round "stage" of round $r$ observed by voter $v$||
 |$VD^{r,stage}_{obs(v)(B)}$|the set of observed direct votes for block $B$ in round $r$|
-|$V^{r,stage}_{obs8v)}$|the set of total votes observed by voter $v$ in sub-round "stage" of round $r$|
+|$V^{r,stage}_{obs(v)}$|the set of total votes observed by voter $v$ in sub-round "stage" of round $r$|
 |$V^{r,stage}_{obs(v)}(B)$|set of all observed votes by $v$ in the sub-round stage of round $r$ for block $B$|$V^{r,stage}_{obs(v)}(B) := \displaystyle\bigcup_{v_i \in \mathbb{V}, B \geq B'} VD^{r,stage}_{obs(v)}(B')$|
 |$H_n(B^{r,pv}_v)$|The current pre-voted block $B^{r,pv}_v$|$H_n(B^{r,pv}_v) = Max(H_n(B)\|\forall B :\#V^{r,pv}_{obs(v)}(B)\geq2\setminus3\|\mathbb{V}\|)$|
 |-|-|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
