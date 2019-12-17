@@ -32,7 +32,7 @@
 
 |Symbol|Description|Defined|
 |-|-|-|
-|$(sk^a, pk^a)$|Account key is a keypair of type of either SR25519, ED25519, secp256k1||
+|Account key $(sk^a, pk^a)$|A keypair of type of either SR25519, ED25519, secp256k1||
 
 
 |||
