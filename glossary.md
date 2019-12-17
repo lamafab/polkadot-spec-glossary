@@ -1,3 +1,9 @@
+# Basics
+|Symbol|Description|Defined|
+|-|-|-|
+|$b$|a sequence of bytes of length $n$|$b:=(b_0,b_1,...,b_{n-1})$ such that $0 \leq b_i \leq 255$|
+|$\mathbb B_n$|the set of all byte arrays of length $n$|$\mathbb B:=\displaystyle\bigcup^\infty_{i=0} \mathbb B_i$|
+
 # Block Format
 |Symbol|Description|Defined|
 |-|-|-|
