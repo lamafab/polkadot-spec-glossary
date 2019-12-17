@@ -6,6 +6,8 @@
 |$H_r$|the root of the Merkle trie, whose leaves implement the storage for the system||
 |$H_e$|the field which is reserved for the Runtime to validate the integrity of the extrinsics composing the block body. The extrinsics_root is set by the runtime and its value is opaque to Polkadot RE||
 |$H_d$|used to store any chain-specific auxiliary data|$H_d(B):=H^1_d,...,H^n_d$ where $H^i_d$'s are digest items|
+|$H_h(B)$|the hash of the header of block $B$ by codec|$H_h(B):=Blake2b(Enc_{SC}(Head(B)))$|
+|$Body(B)$|the body of block $B$|$Body(B):=Enc_{SC}(E_1,...,E_n)$ where each $E_i \in \mathbb B$ is a SCALE encoded extrinsic|
 
 # GRANDPA
 
