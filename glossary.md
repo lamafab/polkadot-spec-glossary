@@ -13,9 +13,11 @@
 |$N$|an individual node in the trie|$N \in \mathcal N$|
 |$\mathcal N_b$|a branch node which has one child or more (max 16)|$\mathcal N_b:=\{N \in \mathcal N \mid \text{N is a branch node}\}$|
 |$\mathcal N_l$|a leaf node is a childless node|$\mathcal N_l:=\{N \in \mathcal N \mid \text{N is a leaf node}\}$|
-|$pk^{Agr}_N$|TODO||
 |$SV_N$|the subvalue of the given node|$SV_N:=\left\{\begin{array}{l l}Enc_{SC}(StoredValue(k_N)) & \text{N is a leaf node}\\ChildrenBitmap(N)\|Enc_{SC}(H(NC_1))...Enc_{SC}(StoredValue(k_N)) & \text{N is a branch node}\end{array}\right.$|
-|$KeyEncode(k)$<br>$k_{enc}$|TODO|$k_{enc}:=(k_{enc1},...,k_{enc2n}):=KeyEncode(k)$<br>such that:$\\KeyEncode(k):\left\{\begin{array}{l l l}\mathbb B & \to & Nibbles^4\\k:=(b_1,...,b_n) := & \to & (b^1_1,b^2_1,b^1_2,b^2_2,...,b^1_n,b^2_n)\\ & \to &:=(k_{enc_1},...,k_{enc2n})\end{array}\right.$|
+|$KeyEncode(k)$<br>$k_{enc}$|TODO|$k_{enc}:=(k_{enc1},...,k_{enc2n}):=KeyEncode(k)$<br>such that:$\\KeyEncode(k):\left\{\begin{array}{l l l}\mathbb B & \to & Nibbles^4\\k:=(b_1,...,b_n) := & \to & (b^1_1,b^2_1,b^1_2,b^2_2,...,b^1_n,b^2_n)\\ & \to &:=(k_{enc_1},...,k_{enc2n})\end{array}\right.$<br>where $Nibble^4$ is the set of all nibbles of 4-bit arrays and $b^1_i$ and $b^2_i$ are 4-bit nibbles, which are the big endian representation of $b_i$:<br>$(b^1_i,b^2_i):=(b_i/16,b_i,mod16)$<br>where mod is the remainder and / is the integer division operators.|
+|$pk_N$|TODO||
+|$pk^{Agr}_N$|TODO||
+|ChildrenBitmap||$ChildrenBitmap:\left.\begin{array}{l}\mathcal N_b \to \mathbb B_2\\N \to (b_{15},...,b_8,b_7,...b_0)_2\end{array}\right.$<br>where<br>$b_i:=\left\{\begin{array}{l c}1 & \exists N_c \in \mathcal N:k_{Nc} = k_{N_b} \parallel i \parallel pk_{Nc}\\0 & otherwise\end{array}\right.$|
 
 # Block Format
 
