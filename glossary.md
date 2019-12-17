@@ -34,6 +34,17 @@
 |-|-|-|
 |Account key $(sk^a, pk^a)$|A keypair of type of either SR25519, ED25519, secp256k1||
 
+# SCALE Codec
+
+TODO: $Enc^{Len}_{SC}$
+
+|Symbol|Description|Defined|
+|-|-|-|
+|$Enc_{SC}(A)$|SCALE encoding of byte array $A := b_1, b_2, ... b_n$ such that $n < 2^{256}$|$Enc_{SC}(A) := Enc^{Len}_{SC}(\parallel A \parallel)\parallel A$|
+|$Enc_{SC}(T)$|SCALE encoding of tuple $T := (A_1, ..., A_n)$ where $A_i$'s are values of different types|$Enc_{SC}(T) := Enc_{SC}(A_1)\parallel Enc_{SC}(A_2)\parallel ... \parallel Enc_{SC}(A_n)$|
+|$\tau$|Varying data type (TODO)|$T = \{T_1, ..., T_n\}$|
+
+
 
 |||
 |-|-|
