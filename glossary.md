@@ -26,6 +26,7 @@
 |$M^{r,stage}_v$|A broadcasted message by the voter $v$ casting his vote to the network|$M^{r,stage}_v := Enc_{SC}(r,id_\mathbb{V},Enc_{SC}(stage,V^{r,stage}_v,Sig_{ED25519}(Enc_{SC}(stage,V^{r,stage}_v,r,V_{id}),v_{id})))$|
 |$J^r(B)$|The justification for block $B$ in round $r$|The justification is a vector of pairs of the type $(V(B'),(Sign^{r,pc}_{vi}(B'),v_{id}))$ in which either $B'\geq B$ or $V^{r,pc}_{vi}(B')$ is an equivocatory vote|
 |$Sign^{r,pc}_{vi}(B')$|The signature of voter $v$, broadcasted during the pre-commit sub-round of round $r$|
+|$M^{r,Fin}_v(B)$|The finalizing message broadcasted by voter $v$ to the network indicating that voter $v$ has finalized bock $B$ in round $r$|$M^{r,Fin}_v(B) := Enc_{SC}(r,V(B),J^r(B))$|
 
 
 |||
