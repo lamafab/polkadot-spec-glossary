@@ -28,6 +28,12 @@
 |$Sign^{r,pc}_{vi}(B')$|The signature of voter $v$, broadcasted during the pre-commit sub-round of round $r$|
 |$M^{r,Fin}_v(B)$|The finalizing message broadcasted by voter $v$ to the network indicating that voter $v$ has finalized bock $B$ in round $r$|$M^{r,Fin}_v(B) := Enc_{SC}(r,V(B),J^r(B))$|
 
+# Cryptographic keys
+
+|Symbol|Description|Defined|
+|-|-|-|
+|$(sk^a, pk^a)$|Account key is a keypair of type of either SR25519, ED25519, secp256k1||
+
 
 |||
 |-|-|
