@@ -1,4 +1,5 @@
 # Basics
+
 |Symbol|Description|Defined|
 |-|-|-|
 |$b$|a sequence of bytes of length $n$|$b:=(b_0,b_1,...,b_{n-1})$ such that $0 \leq b_i \leq 255$|
@@ -8,8 +9,13 @@
 |$Enc_{LE}$||$Enc_{LE}:\left.\begin{array}{l l l}\mathbb Z+ & \to & \mathbb B\\(B_n...B_0)_{256} & \to & (B_0,B_1,..., B_n)\end{array}\right.$|
 |$C$|a blockchain is a directed path graph. Each node of the graph is called Block and indicated by $B$||
 |$P(B)$|the parent of block $B$|$B_{n+1}:=P(B_n)$|
+|$\mathcal N$|the set of the nodes Polkadot state trie||
+|$N$|an individual node in the trie|$N \in \mathcal N$|
+|$\mathcal N_n$|a branch node which has one child or more (max 16). A leaf node is a childless node|$\left.\begin{array}{l}\mathcal N_b:=\{N \in \mathcal N \mid \text{N is a branch node}\}\\\mathcal N_l:=\{N \in \mathcal N \mid \text{N is a leaf node}\}\end{array}\right.$|
+|$pk^{Agr}_N$|TODO||
 
 # Block Format
+
 |Symbol|Description|Defined|
 |-|-|-|
 |$H_p$|the 32-byte Blake2b hash of the header of the parent of the block||
