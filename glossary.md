@@ -40,9 +40,14 @@ TODO: $Enc^{Len}_{SC}$
 
 |Symbol|Description|Defined|
 |-|-|-|
-|$Enc_{SC}(A)$|SCALE encoding of byte array $A := b_1, b_2, ... b_n$ such that $n < 2^{256}$|$Enc_{SC}(A) := Enc^{Len}_{SC}(\parallel A \parallel)\parallel A$|
-|$Enc_{SC}(T)$|SCALE encoding of tuple $T := (A_1, ..., A_n)$ where $A_i$'s are values of different types|$Enc_{SC}(T) := Enc_{SC}(A_1)\parallel Enc_{SC}(A_2)\parallel ... \parallel Enc_{SC}(A_n)$|
+|$A$|Byte array|$A := b_1, b_2, ... b_n$|
+|$T$|Tuple where $A_i$'s are values of different types|$T := (A_1, ..., A_n)$|
+|$S$|Sequence where $Ai$'s are values of the same type (and the decoder is unable to infer value of $n$ from the context)|$S := A_1, ..., A_n$|
 |$\tau$|Varying data type (TODO)|$T = \{T_1, ..., T_n\}$|
+|$Enc_{SC}(A)$|SCALE encoding of byte array $A$ such that $n < 2^{256}$|$Enc_{SC}(A) := Enc^{Len}_{SC}(\parallel A \parallel)\parallel A$|
+|$Enc_{SC}(T)$|SCALE encoding of tuple $T$|$Enc_{SC}(T) := Enc_{SC}(A_1)\parallel Enc_{SC}(A_2)\parallel ... \parallel Enc_{SC}(A_n)$|
+|$Enc_{SC}(S)$|SCALE encoding of sequence $S$|$Enc_{SC}(S) := Enc^{Len}_{SC}(\parallel S \parallel) Enc_{SC}(A_1)\mid Enc_{SC}(A_2)\mid ... \mid Enc_{SC}(A_n)$|
+|$Enc^{Len}_{SC}$|SCALE length encoding aka. compact encoding of a non-negative interger number $n$|TODO|
 
 
 
