@@ -6,6 +6,8 @@
 |$I$|little-endian representation of a non-negative integer|$I=(B_n...B_0)_{256}$|
 |$B$|byte array|$B = (b_0,b_1,...,b_n)$ such that $b_1:=B_i$|
 |$Enc_{LE}$||$Enc_{LE}:\left.\begin{array}{l l l}\mathbb Z+ & \to & \mathbb B\\(B_n...B_0)_{256} & \to & (B_0,B_1,..., B_n)\end{array}\right.$|
+|$C$|a blockchain is a directed path graph. Each node of the graph is called Block and indicated by $B$||
+|$P(B)$|the parent of block $B$|$B_2:=P(B_1)$|
 
 # Block Format
 |Symbol|Description|Defined|
