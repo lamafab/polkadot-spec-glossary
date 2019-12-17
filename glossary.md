@@ -1,3 +1,12 @@
+# Block Format
+|Symbol|Description|Defined|
+|-|-|-|
+|$H_p$|the 32-byte Blake2b hash of the header of the parent of the block||
+|$H_i$|the interger representing the index of the current block in the chain. It is equal to the number of the ancestor blocks. The genesis block has number 0||
+|$H_r$|the root of the Merkle trie, whose leaves implement the storage for the system||
+|$H_e$|the field which is reserved for the Runtime to validate the integrity of the extrinsics composing the block body. The extrinsics_root is set by the runtime and its value is opaque to Polkadot RE||
+|$H_d$|used to store any chain-specific auxiliary data|$H_d(B):=H^1_d,...,H^n_d$ where $H^i_d$'s are digest items|
+
 # GRANDPA
 
 |Symbol|Description|Defined|
