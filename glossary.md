@@ -47,6 +47,12 @@
 |$Enc_{SC}(S)$|SCALE encoding of sequence $S$|$Enc_{SC}(S) := Enc^{Len}_{SC}(\parallel S \parallel) Enc_{SC}(A_1)\mid Enc_{SC}(A_2)\mid ... \mid Enc_{SC}(A_n)$|
 |$Enc^{Len}_{SC}$|SCALE length encoding aka. compact encoding of non-negative interger numbers of varying sized prominently in an encoding length of arrays|$Enc^{Len}_{SC}: \mathbb N \to \mathbb B\\n \to b\left\{\begin{array}{l l}l_1 & 0 \leq n < 2^6\\i_1i_2 & 2^6 \leq n < 2^{14} \\j_1j_2j_3 & 2^{14} \leq n < 2^{30} \\k_1k_2...k_m & 2^{30} \leq n\end{array}\right.\\$<br>in where the lest significant bits of the first byte of byte array $b$ are defined as follows:$\\\left.\begin{array}{r r}l^1_1l^0_1 = 00\\i^1_1i^0_1 = 01\\j^1_1j^0_1 = 10\\k^1_1k^0_1 = 11\end{array}\right.\\$<br>and the rest of the bits of $b$ store the value of $n$ in little-endian format in base-2 as follows:$\\\left.\begin{array}{l l}l^7_1...l^3_1l^2_1 & n < 2^6\\i^7_2...i^0_2i^7_1...i^2_1 & 2^6 \leq n < 2^{14}\\j^7_4...j^0_4j^7_3...j^7_1...j^2_1 & 2^{14} \leq n < 2^{30}\\k_2+k_32^8+k_42^{2\times8}+...+k_m2^{(m-2)\times8} & 2^{30} \leq n\end{array}\right\}:=n\\$<br>such that:$\\k^7_1..k^3_1k^2_1:=m-4$|
 
+# Hex encoding
+
+|Symbol|Description|Defined|
+|-|-|-|
+|$Enc_{HE}(PK)$||$Enc_{HE}(PK) := \left\{\begin{array}{l l}Nibbles_4 \to \mathbb B\\PK=(k_1,...,k_n)\to\left\{\begin{array}{l l}(16k_1+k_2,...,16k_{2i-1}+k_{2i}) & n = 2i\\(k_1,16k_2+k_3,...,16k_{2i}+k_{2i+1}) & n = 2i+1\end{array}\right.\end{array}\right.$|
+
 |||
 |-|-|
 |$k^{pr}_v$|Private key|
