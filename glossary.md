@@ -3,6 +3,9 @@
 |-|-|-|
 |$b$|a sequence of bytes of length $n$|$b:=(b_0,b_1,...,b_{n-1})$ such that $0 \leq b_i \leq 255$|
 |$\mathbb B_n$|the set of all byte arrays of length $n$|$\mathbb B:=\displaystyle\bigcup^\infty_{i=0} \mathbb B_i$|
+|$I$|little-endian representation of a non-negative integer|$I=(B_n...B_0)_{256}$|
+|$B$|byte array|$B = (b_0,b_1,...,b_n)$ such that $b_1:=B_i$|
+|$Enc_{LE}$||$Enc_{LE}:\left.\begin{array}{l l l}\mathbb Z+ & \to & \mathbb B\\(B_n...B_0)_{256} & \to & (B_0,B_1,..., B_n)\end{array}\right.$|
 
 # Block Format
 |Symbol|Description|Defined|
