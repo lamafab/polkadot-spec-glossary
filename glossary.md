@@ -36,8 +36,6 @@
 
 # SCALE Codec
 
-TODO: $Enc^{Len}_{SC}$
-
 |Symbol|Description|Defined|
 |-|-|-|
 |$A$|Byte array|$A := b_1, b_2, ... b_n$|
@@ -47,9 +45,10 @@ TODO: $Enc^{Len}_{SC}$
 |$Enc_{SC}(A)$|SCALE encoding of byte array $A$ such that $n < 2^{256}$|$Enc_{SC}(A) := Enc^{Len}_{SC}(\parallel A \parallel)\parallel A$|
 |$Enc_{SC}(T)$|SCALE encoding of tuple $T$|$Enc_{SC}(T) := Enc_{SC}(A_1)\parallel Enc_{SC}(A_2)\parallel ... \parallel Enc_{SC}(A_n)$|
 |$Enc_{SC}(S)$|SCALE encoding of sequence $S$|$Enc_{SC}(S) := Enc^{Len}_{SC}(\parallel S \parallel) Enc_{SC}(A_1)\mid Enc_{SC}(A_2)\mid ... \mid Enc_{SC}(A_n)$|
-|$Enc^{Len}_{SC}$|SCALE length encoding aka. compact encoding of a non-negative interger number $n$|TODO|
+|$Enc^{Len}_{SC}$|SCALE length encoding aka. compact encoding of non-negative interger numbers of varying sized prominently in an encoding length of arrays|TODO|
 
 $$
+Enc^{Len}_{SC}: \mathbb N \to \mathbb B \\
 n \to b
 \begin{Bmatrix}
 l_1 && 0 \leq n < 2^6 \\
