@@ -49,7 +49,15 @@ TODO: $Enc^{Len}_{SC}$
 |$Enc_{SC}(S)$|SCALE encoding of sequence $S$|$Enc_{SC}(S) := Enc^{Len}_{SC}(\parallel S \parallel) Enc_{SC}(A_1)\mid Enc_{SC}(A_2)\mid ... \mid Enc_{SC}(A_n)$|
 |$Enc^{Len}_{SC}$|SCALE length encoding aka. compact encoding of a non-negative interger number $n$|TODO|
 
-
+$$
+n \to b
+\begin{Bmatrix}
+l_1 && 0 \leq n < 2^6 \\
+i_1i_2 && 2^6 \leq n < 2^{14} \\
+j_1j_2j_3 && 2^{14} \leq n < 2^{30} \\
+k_1k_2...k_m && 2^{30} \leq n
+\end{Bmatrix}
+$$
 
 |||
 |-|-|
