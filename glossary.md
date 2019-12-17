@@ -3,9 +3,11 @@
 |Symbol|Description|Defined|
 |-|-|-|
 |$v$|GRANDPA Voter|
+|$k^{pr}_v$|ED25519 private key of $v$||
+|$v_{id}$|ED25519 public key of $v$||
 |$\mathbb{V}$|set of all GRANDPA voters|
 |$\mathbb{V}_B$|set of all GRANDPA voters for a given block|
-|$\mathbb{V}_{id}$|...|
+|$\mathbb{V}_{id}$|is an incremental counter tracking membership, which changes in $V$|
 |$GS$|GRANDPA state|$GS := \{\mathbb{V},id_\mathbb{V}, r\}$|
 |$V(B)$|GRANDPA vote|$V(B) := (H_h(B),H-I(B))$|
 |$V^{r,pv}_v$|pre-vote|
@@ -58,8 +60,6 @@
 
 |||
 |-|-|
-|$k^{pr}_v$|Private key|
-|$v_{id}$|
 
 |||
 |-|-|
