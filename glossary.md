@@ -18,7 +18,8 @@
 |$KeyEncode(k)$<br>$k_{enc}$|function to encode keys for labeling brnaches of the Trie|$k_{enc}:=(k_{enc1},...,k_{enc2n}):=KeyEncode(k)$<br>such that:$\\KeyEncode(k):\left\{\begin{array}{l l l}\mathbb B & \to & Nibbles^4\\k:=(b_1,...,b_n) := & \to & (b^1_1,b^2_1,b^1_2,b^2_2,...,b^1_n,b^2_n)\\ & \to &:=(k_{enc_1},...,k_{enc2n})\end{array}\right.$<br>where $Nibble^4$ is the set of all nibbles of 4-bit arrays and $b^1_i$ and $b^2_i$ are 4-bit nibbles, which are the big endian representation of $b_i$:<br>$(b^1_i,b^2_i):=(b_i/16,b_i,mod16)$<br>where mod is the remainder and / is the integer division operators.|
 |$pk_N$|TODO||
 |$pk^{Agr}_N$|TODO||
-|ChildrenBitmap||$ChildrenBitmap:\left.\begin{array}{l}\mathcal N_b \to \mathbb B_2\\N \to (b_{15},...,b_8,b_7,...b_0)_2\end{array}\right.$<br>where<br>$b_i:=\left\{\begin{array}{l c}1 & \exists N_c \in \mathcal N:k_{Nc} = k_{N_b} \parallel i \parallel pk_{Nc}\\0 & otherwise\end{array}\right.$|
+|$ChildrenBitmap$||$ChildrenBitmap:\left.\begin{array}{l}\mathcal N_b \to \mathbb B_2\\N \to (b_{15},...,b_8,b_7,...b_0)_2\end{array}\right.$<br>where<br>$b_i:=\left\{\begin{array}{l c}1 & \exists N_c \in \mathcal N:k_{Nc} = k_{N_b} \parallel i \parallel pk_{Nc}\\0 & otherwise\end{array}\right.$|
+|$H(N)$|the Merkle value of $N$|$\left.\begin{array}{l}H:\mathbb B \to \mathbb B_{32}\\H(N):\left\{\begin{array}{l l}v_N & \parallel v_N \parallel < 32\\Blake2b(v_N) & \parallel v_N \parallel \geq 32\end{array}\right.\end{array}\right.$<br><br>Where $v_N$ is the node value of $N$ and $0_{32-\parallel v_N \parallel}$ an all zero byte array of length $32-\parallel v_N \parallel$. The Merkle hash of the Trie is defined as: $Blake2b(H(R))$ where $R$ is the root of the Trie.|
 
 # Block Format
 
