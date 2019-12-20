@@ -1,3 +1,11 @@
+---
+title: "Polkadot Spec Cheat Sheet (WIF)"
+date: December 20, 2019
+geometry: margin=10mm,landscape
+output: pdf_document
+fontsize: 9pt
+---
+
 # Basics
 
 |Symbol|Description|Defined|
