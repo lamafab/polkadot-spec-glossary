@@ -9,7 +9,7 @@ fontsize: 9pt
 # Basics
 
 |Symbol|Description|Defined|
-|-|-|-|
+|-|---|-----|
 |$b$|a sequence of bytes of length $n$|$b:=(b_0,b_1,...,b_{n-1})$ such that $0 \leq b_i \leq 255$|
 |$\mathbb B_n$|the set of all byte arrays of length $n$|$\mathbb B:=\displaystyle\bigcup^\infty_{i=0} \mathbb B_i$|
 |$I$|little-endian representation of a non-negative integer|$I=(B_n...B_0)_{256}$|
@@ -34,7 +34,7 @@ fontsize: 9pt
 # Block Format
 
 |Symbol|Description|Defined|
-|-|-|-|
+|-|---|-----|
 |$H_p$|the 32-byte Blake2b hash of the header of the parent of the block||
 |$H_i$|the interger representing the index of the current block in the chain. It is equal to the number of the ancestor blocks. The genesis block has number 0||
 |$H_r$|the root of the Merkle trie, whose leaves implement the storage for the system||
@@ -46,7 +46,7 @@ fontsize: 9pt
 # SCALE Codec
 
 |Symbol|Description|Defined|
-|-|-|-|
+|-|---|-----|
 |$A$|Byte array|$A := b_1, b_2, ... b_n$|
 |$T$|Tuple where $A_i$'s are values of different types|$T := (A_1, ..., A_n)$|
 |$S$|Sequence where $Ai$'s are values of the same type (and the decoder is unable to infer value of $n$ from the context)|$S := A_1, ..., A_n$|
@@ -59,7 +59,7 @@ fontsize: 9pt
 # GRANDPA
 
 |Symbol|Description|Defined|
-|-|-|-|
+|-|---|-----|
 |$v$|GRANDPA Voter|
 |$k^{pr}_v$|ED25519 private key of $v$||
 |$v_{id}$|ED25519 public key of $v$||
@@ -83,7 +83,7 @@ fontsize: 9pt
 # Voting Messages Specification
 
 |Symbol|Description|Defined|
-|-|-|-|
+|-|---|-----|
 |$M^{r,stage}_v$|A broadcasted message by the voter $v$ casting his vote to the network|$M^{r,stage}_v := Enc_{SC}(r,id_\mathbb{V},Enc_{SC}(stage,V^{r,stage}_v,Sig_{ED25519}(Enc_{SC}(stage,V^{r,stage}_v,r,V_{id}),v_{id})))$|
 |$J^r(B)$|The justification for block $B$ in round $r$|The justification is a vector of pairs of the type $(V(B'),(Sign^{r,pc}_{vi}(B'),v_{id}))$ in which either $B'\geq B$ or $V^{r,pc}_{vi}(B')$ is an equivocatory vote|
 |$Sign^{r,pc}_{vi}(B')$|The signature of voter $v$, broadcasted during the pre-commit sub-round of round $r$|
@@ -92,18 +92,18 @@ fontsize: 9pt
 # Cryptographic keys
 
 |Symbol|Description|Defined|
-|-|-|-|
+|-|---|-----|
 |Account key $(sk^a, pk^a)$|A keypair of type of either SR25519, ED25519, secp256k1||
 
 # Hex encoding
 
 |Symbol|Description|Defined|
-|-|-|-|
+|-|---|-----|
 |$Enc_{HE}(PK)$|hex encoding|$Enc_{HE}(PK) := \left\{\begin{array}{l l}Nibbles_4 \to \mathbb B\\PK=(k_1,...,k_n)\to\left\{\begin{array}{l l}(16k_1+k_2,...,16k_{2i-1}+k_{2i}) & n = 2i\\(k_1,16k_2+k_3,...,16k_{2i}+k_{2i+1}) & n = 2i+1\end{array}\right.\end{array}\right.$|
 
 # Misc (TODO...)
 
 |Symbol|Description|Defined|
-|-|-|-|
+|-|---|-----|
 |$H_h(B)$|Block hash||
 |$H_i(B)$|Block number||
