@@ -1,13 +1,14 @@
-
 \documentclass[11pt,a4paper]{article}
 \usepackage{tabulary}
 \usepackage{geometry}
 \usepackage{amssymb}
 \usepackage{amsmath}
-
 \geometry{
-  landscape,
-  a4paper,
+    a4paper,
+    landscape,
+    total={170mm,257mm},
+    left=20mm,
+    top=20mm,
 }
 
 \begin{document}
@@ -15,13 +16,9 @@
 \author{Web3 Foundation}
 \date{February 2020}
 \maketitle
-\section{Basics}
-
-\(\mathbb Test\)
-
 \section*{Basics}
 \begin{center}
- \begin{tabulary}{1.0\textwidth}{LLL}
+ \begin{tabulary}{1.5\textwidth}{LLL}
   \textbf{Symbol} & \textbf{Description} & \textbf{Defined} \\
   \hline
 \(b\) &a sequence of bytes of length \(n\) & \(b:=(b_0,b_1,...,b_{n-1})\) such that \(0 \leq b_i \leq 255\) \\
@@ -43,7 +40,7 @@
 
 \section*{Block Format}
 \begin{center}
- \begin{tabulary}{1.0\textwidth}{LLL}
+ \begin{tabulary}{1.5\textwidth}{LLL}
   \textbf{Symbol} & \textbf{Description} & \textbf{Defined} \\
   \hline
 \(H_p\) &the 32-byte Blake2b hash of the header of the parent of the block&\\
@@ -60,7 +57,7 @@
 
 \section*{SCALE Codec}
 \begin{center}
- \begin{tabulary}{1.0\textwidth}{LLL}
+ \begin{tabulary}{1.5\textwidth}{LLL}
   \textbf{Symbol} & \textbf{Description} & \textbf{Defined} \\
   \hline
 \(A\) &Byte array& \(A := b_1, b_2, ... b_n\) \\
@@ -75,7 +72,7 @@
 
 \section*{GRANDPA}
 \begin{center}
- \begin{tabulary}{1.0\textwidth}{LLL}
+ \begin{tabulary}{1.5\textwidth}{LLL}
   \textbf{Symbol} & \textbf{Description} & \textbf{Defined} \\
   \hline
 \(v\) &GRANDPA Voter\\
@@ -102,7 +99,7 @@
 
 \section*{Voting Messages Specification}
 \begin{center}
- \begin{tabulary}{1.0\textwidth}{LLL}
+ \begin{tabulary}{1.5\textwidth}{LLL}
   \textbf{Symbol} & \textbf{Description} & \textbf{Defined} \\
   \hline
 \(M^{r,stage}_v\) &A broadcasted message by the voter \(v\) casting his vote to the network& \(M^{r,stage}_v := Enc_{SC}(r,id_\mathbb{V},Enc_{SC}(stage,V^{r,stage}_v,Sig_{ED25519}(Enc_{SC}(stage,V^{r,stage}_v,r,V_{id}),v_{id})))\) \\
@@ -114,7 +111,7 @@
 
 \section*{Cryptographic keys}
 \begin{center}
- \begin{tabulary}{1.0\textwidth}{LLL}
+ \begin{tabulary}{1.5\textwidth}{LLL}
   \textbf{Symbol} & \textbf{Description} & \textbf{Defined} \\
   \hline
 Account key \((sk^a, pk^a)\) &A keypair of type of either SR25519, ED25519, secp256k1&\\
@@ -123,7 +120,7 @@ Account key \((sk^a, pk^a)\) &A keypair of type of either SR25519, ED25519, secp
 
 \section*{Hex encoding}
 \begin{center}
- \begin{tabulary}{1.0\textwidth}{LLL}
+ \begin{tabulary}{1.5\textwidth}{LLL}
   \textbf{Symbol} & \textbf{Description} & \textbf{Defined} \\
   \hline
 Account key \((sk^a, pk^a)\) &A keypair of type of either SR25519, ED25519, secp256k1&\\
